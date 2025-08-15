@@ -184,9 +184,208 @@
     <section class="hero" aria-labelledby="hero-title">
       <div>
         <div class="kicker">Welwyn Garden City · Hertfordshire</div>
-        <h1 id="hero-title">Movin
+        <h1 id="hero-title">Moving &amp; Handling Training for Care Homes and Domiciliary Care</h1>
+        <p>Hands-on, competency-based training with hoists and slings in small groups at our <strong>Training House in Welwyn Garden City</strong>. A realistic home setting that’s ideal for Home Care teams. CPD-approved courses to keep people safe and ensure compliance.</p>
+        <div class="badges">
+          <span class="badge">CPD Approved</span>
+          <span class="badge">Realistic Home Setting</span>
+          <span class="badge">Small Group · Practical</span>
+        </div>
+        <div class="cta-bar">
+          <a class="button" href="#booking">Book a Course</a>
+          <a class="button alt" href="tel:+447804649729" aria-label="Call 07804 649729">Call 07804&nbsp;649729</a>
+        </div>
+      </div>
+      <div>
+        <img src="/Training%20Image.jpg" alt="Care staff practising safe hoist techniques during training in a home setting" loading="eager" width="1200" height="675">
+      </div>
+    </section>
 
+    <!-- WHY US -->
+    <section id="why-us" aria-labelledby="why-title">
+      <h2 id="why-title">Why choose Study Room Training?</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Competency-based</h3>
+          <p>Staff complete practical assessments so managers can evidence competence and compliance.</p>
+        </div>
+        <div class="card">
+          <h3>Realistic home environment</h3>
+          <p>Train in a house — room layouts, space and scenarios mirror Home Care work.</p>
+        </div>
+        <div class="card">
+          <h3>Weekly availability</h3>
+          <p>Open courses run regularly; send individuals or book dedicated sessions for your team.</p>
+        </div>
+        <div class="card">
+          <h3>Manager reports</h3>
+          <p>Post-course evaluations sent to managers to support audits and CQC readiness.</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- COURSES -->
+    <section id="courses" aria-labelledby="courses-title">
+      <h2 id="courses-title">Key training areas</h2>
+      <div class="grid">
+        <article class="card" itemscope itemtype="https://schema.org/Course">
+          <h3 itemprop="name">Moving &amp; Handling People (Hoists &amp; Slings)</h3>
+          <p itemprop="description">Safe transfers, dignity, risk assessment, and correct equipment use.</p>
+        </article>
+        <article class="card" itemscope itemtype="https://schema.org/Course">
+          <h3 itemprop="name">Medication Administration</h3>
+          <p itemprop="description">Best-practice administration, documentation and MAR charts to prevent errors.</p>
+        </article>
+        <article class="card" itemscope itemtype="https://schema.org/Course">
+          <h3 itemprop="name">Pressure Ulcer &amp; Friction Prevention</h3>
+          <p itemprop="description">Positioning, equipment and skin-integrity strategies that reduce harm.</p>
+        </article>
+        <article class="card" itemscope itemtype="https://schema.org/Course">
+          <h3 itemprop="name">Train-the-Trainer (5-Day)</h3>
+          <p itemprop="description">Develop in-house trainers: full induction day for new staff plus annual updates.</p>
+        </article>
+      </div>
+    </section>
 
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About us</h2>
+      <p><strong>Study Room Training</strong> helps Health &amp; Social Care staff build practical skills and confidence. Our trainers have 25+ years’ experience across community, hospital and care-home settings. Our courses are <strong>CPD approved</strong>, with realistic scenarios delivered in a home environment.</p>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section id="booking" aria-labelledby="booking-title">
+      <h2 id="booking-title">Book a course</h2>
+      <p class="note">We aim to reply within one working day. For urgent bookings, call <a href="tel:+447804649729">07804 649729</a>.</p>
+
+      <form id="booking-form" action="https://formspree.io/f/xjkozdap" method="POST">
+        <!-- Honeypot -->
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off">
+
+        <div class="row">
+          <div>
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div>
+            <label for="org">Organisation</label>
+            <input id="org" name="organisation" type="text" autocomplete="organization">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="course">Course</label>
+            <select id="course" name="course" required>
+              <option value="" disabled selected>Select a course</option>
+              <option>Moving & Handling People (Hoists & Slings)</option>
+              <option>Medication Administration</option>
+              <option>Pressure Ulcer & Friction Prevention</option>
+              <option>Train-the-Trainer (5-Day)</option>
+              <option>Other (please describe)</option>
+            </select>
+          </div>
+          <div>
+            <label for="date">Preferred date</label>
+            <input id="date" name="preferred_date" type="date">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="attendees">Number of attendees</label>
+            <input id="attendees" name="attendees" type="number" min="1" step="1">
+          </div>
+          <div>
+            <label for="location">Location</label>
+            <select id="location" name="location">
+              <option>Training House (Welwyn Garden City)</option>
+              <option>On-site at your care setting</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="message">Notes / requirements</label>
+          <textarea id="message" name="message" placeholder="Tell us about any equipment available (hoists/slings), access needs, or preferred times."></textarea>
+        </div>
+
+        <div>
+          <label class="help">
+            <input type="checkbox" name="consent" required>
+            I understand cancellations require <strong>at least 14 business days’ notice</strong> for a full refund.
+          </label>
+        </div>
+
+        <!-- Formspree helper fields -->
+        <input type="hidden" name="_subject" value="Course booking enquiry — Study Room Training">
+        <input type="hidden" name="_template" value="table">
+
+        <button class="button" type="submit">Send booking request</button>
+        <div id="msg-ok" class="alert ok" role="status" aria-live="polite">Thanks — your request was sent. We’ll get back to you shortly.</div>
+        <div id="msg-err" class="alert err" role="alert">Sorry, something went wrong. Please email <a href="mailto:info@studyroomtraining.co.uk">info@studyroomtraining.co.uk</a> or call 07804&nbsp;649729.</div>
+      </form>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <address>
+        <p><strong>Venue:</strong> Training House — Welwyn Garden City, Hertfordshire <em>(by appointment)</em></p>
+        <p><strong>Email:</strong> <a href="mailto:info@studyroomtraining.co.uk">info@studyroomtraining.co.uk</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+447804649729">07804&nbsp;649729</a></p>
+      </address>
+      <div class="cta-bar">
+        <a class="button" href="#booking">Book a Course</a>
+        <a class="button alt" href="tel:+447804649729">Call Now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; <span id="y"></span> Study Room Training. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Auto year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Form handler (progressive enhancement; Formspree still works without JS)
+    const form = document.getElementById('booking-form');
+    const ok = document.getElementById('msg-ok');
+    const err = document.getElementById('msg-err');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      ok.style.display = 'none'; err.style.display = 'none';
+
+      const data = new FormData(form);
+      // Abort if honeypot filled
+      if (data.get('website')) return;
+
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept':'application/json' }});
+        if (res.ok) { ok.style.display = 'block'; form.reset(); }
+        else throw new Error('Bad response');
+      } catch {
+        err.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
 
 
