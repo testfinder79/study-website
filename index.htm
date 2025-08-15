@@ -1,81 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Room Training - Providing Health and Social Care Training</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moving & Handling Training in Hertfordshire | Study Room Training (CPD Approved)</title>
 
-  <!-- Include Google reCAPTCHA API -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- Primary SEO -->
+  <meta name="description" content="Study Room Training provides CPD-approved Moving & Handling (People Handling) and Health & Social Care training in Welwyn Garden City, Hertfordshire. Small groups, practical hoist & sling training, and train-the-trainer courses." />
+  <link rel="canonical" href="https://www.studyroomtraining.co.uk/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.studyroomtraining.co.uk/" />
+  <meta property="og:title" content="Moving & Handling Training in Hertfordshire | Study Room Training" />
+  <meta property="og:description" content="CPD-approved, practical training for care homes and domiciliary care. Small groups at WelTech Centre, Welwyn Garden City." />
+  <meta property="og:image" content="https://www.studyroomtraining.co.uk/Training%20Image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Moving & Handling Training in Hertfordshire | Study Room Training" />
+  <meta name="twitter:description" content="CPD-approved, practical training for care homes and domiciliary care in Welwyn Garden City." />
+  <meta name="twitter:image" content="https://www.studyroomtraining.co.uk/Training%20Image.jpg" />
+
+  <!-- Icons -->
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+
+  <!-- Preload hero image for CLS -->
+  <link rel="preload" as="image" href="/Training%20Image.jpg" imagesrcset="/Training%20Image.jpg 1200w" imagesizes="100vw" />
+
+  <!-- Styles (brand palette derived from your logo) -->
+  <style>
+    :root{
+      --brand: #2f4ea2;          /* indigo-blue */
+      --brand-dark:#0f2f46;      /* deep blue/teal */
+      --brand-accent:#4e63d9;    /* bright accent */
+      --text:#1b1b1b;
+      --muted:#5b6470;
+      --bg:#ffffff;
+      --bg-soft:#f6f8fb;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif; color:var(--text); background:var(--bg);}
+    a{color:var(--brand); text-decoration:underline;}
+    header{position:sticky; top:0; z-index:10; background:#fff; border-bottom:1px solid #e9edf2;}
+    .wrap{max-width:1100px; margin:0 auto; padding:0 16px;}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:10px 0;}
+    .nav img{width:160px; height:auto}
+    .nav a{text-decoration:none; color:var(--text); font-weight:600; padding:10px 12px; border-radius:12px;}
+    .nav a:hover{background:var(--bg-soft)}
+    .cta{background:var(--brand); color:#fff !important; border-radius:999px; padding:10px 18px; box-shadow:0 6px 16px rgba(47,78,162,.25);}
+    .cta:hover{background:var(--brand-dark);}
+    .hero{display:grid; grid-template-columns:1.2fr 1fr; gap:28px; padding:48px 0 24px;}
+    .hero h1{font-size:clamp(28px,4vw,44px); line-height:1.15; margin:0 0 12px;}
+    .kicker{color:var(--brand-dark); font-weight:700; letter-spacing:.02em; text-transform:uppercase; font-size:.9rem;}
+    .hero p{color:var(--muted); font-size:1.05rem;}
+    .hero img{width:100%; height:auto; border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    .badges{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 0}
+    .badge{background:var(--bg-soft); color:var(--brand-dark); padding:6px 10px; border-radius:999px; font-size:.9rem;}
+    section{padding:48px 0; border-top:1px solid #eef2f7;}
+    h2{font-size:clamp(22px,3.2vw,32px); margin:0 0 12px;}
+    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+    .card{background:#fff; border:1px solid #e8ecf3; border-radius:18px; padding:18px; box-shadow:0 8px 18px rgba(16,33,60,.05)}
+    .card h3{margin:0 0 8px; font-size:1.1rem}
+    .list{margin:0; padding:0 0 0 18px}
+    .cta-bar{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .button{display:inline-block; text-decoration:none; border:1px solid var(--brand); color:#fff; background:var(--brand); padding:12px 16px; border-radius:12px; font-weight:700}
+    .button.alt{background:#fff; color:var(--brand); }
+    .button:hover{filter:brightness(.95)}
+    address{font-style:normal}
+    footer{background:var(--bg-soft); padding:28px 0; color:#3b4350; border-top:1px solid #e9edf2}
+    .sr-only{position:absolute; left:-9999px}
+    @media (max-width:900px){ .hero{grid-template-columns:1fr;} }
+  </style>
+
+  <!-- JSON-LD: Organization + Courses -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Study Room Training",
+    "url":"https://www.studyroomtraining.co.uk/",
+    "logo":"https://www.studyroomtraining.co.uk/logo.png",
+    "email":"info@studyroomtraining.co.uk",
+    "telephone":"+44-7804-649729",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"WelTech Centre, Ridgeway",
+      "addressLocality":"Welwyn Garden City",
+      "addressRegion":"Hertfordshire",
+      "postalCode":"AL7 2AA",
+      "addressCountry":"GB"
+    },
+    "areaServed":"Hertfordshire, UK",
+    "sameAs":[]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"Health & Social Care Courses",
+    "itemListElement":[
+      {"@type":"Course","name":"Moving and Handling People (Hoists & Slings)","description":"Practical, competency-based training for care homes and domiciliary care teams."},
+      {"@type":"Course","name":"Medication Administration","description":"Safe administration, documentation and error prevention for care staff."},
+      {"@type":"Course","name":"Pressure Ulcer & Friction Prevention","description":"Risk factors, positioning, equipment and prevention strategies."},
+      {"@type":"Course","name":"Train-the-Trainer (5-Day)","description":"Develop in-house trainers; full induction day and annual updates."}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQ for rich results -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Where is the training delivered?","acceptedAnswer":{"@type":"Answer","text":"At the WelTech Centre in Welwyn Garden City (AL7 2AA). On-site training at your care setting is also available on request."}},
+      {"@type":"Question","name":"Are your courses CPD approved?","acceptedAnswer":{"@type":"Answer","text":"Yes—our courses are CPD-approved and we are an approved training provider with the Hertfordshire Care Providers Association."}},
+      {"@type":"Question","name":"Do you offer small group sessions?","acceptedAnswer":{"@type":"Answer","text":"Yes, we focus on small groups with a strong practical component so staff build real confidence using hoists, slings and safe techniques."}}
+    ]
+  }
+  </script>
+
+  <!-- Optional: sitemap hint -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 </head>
 <body>
-  <!-- Logo at the top of the page -->
+  <a class="sr-only" href="#content">Skip to content</a>
+
   <header>
-    <img src="https://raw.githubusercontent.com/testfinder79/study-website/main/logo.png" alt="Study Room Training Logo" style="width: 200px; height: auto; margin: 20px 0;">
+    <div class="wrap nav" role="navigation" aria-label="Main">
+      <a href="/" aria-label="Study Room Training — Home">
+        <img src="/logo.png" alt="Study Room Training logo">
+      </a>
+      <nav>
+        <a href="#courses">Courses</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">Book / Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <h1>Study Room Training - Moving and Assisting People Training for Care Homes and Domiciliary Care Companies</h1>
+  <main id="content" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="kicker">Welwyn Garden City · Hertfordshire</div>
+        <h1 id="hero-title">Moving &amp; Handling Training for Care Homes and Domiciliary Care</h1>
+        <p>Practical, competency-based training with hoists and slings, delivered in small groups at the <strong>WelTech Centre (AL7 2AA)</strong>. CPD-approved courses designed to keep people safe and ensure compliance.</p>
+        <div class="badges">
+          <span class="badge">CPD Approved</span>
+          <span class="badge">HCPA Approved Provider</span>
+          <span class="badge">Small Group, Hands-On</span>
+        </div>
+        <div class="cta-bar">
+          <a class="button" href="#contact">Book a Course</a>
+          <a class="button alt" href="tel:+447804649729" aria-label="Call 07804 649729">Call 07804&nbsp;649729</a>
+        </div>
+      </div>
+      <div>
+        <img src="/Training%20Image.jpg" alt="Care staff practising safe hoist techniques during training" loading="eager" width="1200" height="675">
+      </div>
+    </section>
 
-  <p>Located in the heart of Welwyn Garden City at the WelTech Centre (AL7 2AA), we offer expert manual handling mandatory training tailored specifically for care homes and domiciliary care companies.</p>
+    <section id="why-us" aria-labelledby="why-title">
+      <h2 id="why-title">Why choose Study Room Training?</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Competency-based</h3>
+          <p>Staff complete practical assessments so managers can evidence competence and compliance.</p>
+        </div>
+        <div class="card">
+          <h3>Weekly availability</h3>
+          <p>Open courses run regularly; send individuals or book dedicated sessions for your team.</p>
+        </div>
+        <div class="card">
+          <h3>Real-world practice</h3>
+          <p>Hands-on work with hoists, slings and safe techniques—build confidence that transfers to care.</p>
+        </div>
+        <div class="card">
+          <h3>Manager reports</h3>
+          <p>Post-course evaluations sent to managers to support audits and CQC readiness.</p>
+        </div>
+      </div>
+    </section>
 
-  <h2>Why Choose Our Training?</h2>
-  <ul>
-    <li>Our training is competency-based, ensuring that staff are fully equipped to handle manual tasks safely and confidently.</li>
-    <li>We offer weekly course reminders directly to your inbox, so you never miss an important training session.</li>
-    <li>Courses are easy to book, with options for booking the whole session or sending staff to our open courses that run regularly.</li>
-    <li>We deliver training in small groups, providing a more personalized learning experience.</li>
-    <li>Our training covers essential mandatory topics such as safe medication administration, pressure ulcer prevention, and moving people safely with dignity.</li>
-  </ul>
+    <section id="courses" aria-labelledby="courses-title">
+      <h2 id="courses-title">Key training areas</h2>
+      <div class="grid">
+        <article class="card" itemscope itemtype="https://schema.org/Course">
+          <h3 itemprop="name">Moving &amp; Handling People (Hoists &amp; Slings)</h3>
+          <p itemprop="description">Safe transfers, dignity, risk assessment, and correct equipment use.</p>
+        </article>
+        <article class="card" itemscope itemtype="https://schema.org/Course">
+          <h3 itemprop="name">Medication Administration</h3>
+          <p itemprop="description">Prevent errors with best-practice administration, documentation and MAR charts.</p>
+        </article>
+        <article class="card" itemscope itemtype="https://schema.org/Course">
+          <h3 itemprop="name">Pressure Ulcer &amp; Friction Prevention</h3>
+          <p itemprop="description">Positioning, equipment and skin-integrity strategies that reduce harm.</p>
+        </article>
+        <article class="card" itemscope itemtype="https://schema.org/Course">
+          <h3 itemprop="name">Train-the-Trainer (5-Day)</h3>
+          <p itemprop="description">Develop in-house trainers: full induction day for new staff plus annual updates.</p>
+        </article>
+      </div>
+    </section>
 
-  <!-- Picture right after "Why Choose Our Training?" -->
-  <img src="https://raw.githubusercontent.com/testfinder79/study-website/main/Training%20Image.jpg" alt="Training Image" style="width: 50%; height: auto; padding-top: 20px;">
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About us</h2>
+      <p><strong>Study Room Training</strong> was created to help Health &amp; Social Care staff build practical skills and confidence. Our trainers have over 25 years’ experience across community, hospital and care-home settings, from Nursery Nurse to Registered Manager. We’re an <strong>HCPA Approved Training Provider</strong> and our courses are <strong>CPD approved</strong>.</p>
+    </section>
 
-  <h2>Key Training Areas:</h2>
-  <ul>
-    <li><strong>Medication Training:</strong> Ensure safe administration of medication to prevent overdoses, underdoses, and missed doses, all of which can have negative impacts on the person being supported.</li>
-    <li><strong>Pressure Ulcers and Friction Prevention:</strong> Staff will learn the importance of correct techniques to prevent pressure ulcers and friction injuries.</li>
-    <li><strong>Safe Hoisting and Slings Training:</strong> Proper techniques for lifting and assisting people to maintain dignity and prevent injury.</li>
-    <li><strong>Train-the-Trainer 5-Day Course:</strong> Develop in-house trainers with a full-day training session for new staff and annual updates for existing trainers.</li>
-  </ul>
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Book &amp; contact</h2>
+      <address>
+        <p><strong>Address:</strong> WelTech Centre, Ridgeway, Welwyn Garden City, Hertfordshire, AL7 2AA</p>
+        <p><strong>Email:</strong> <a href="mailto:info@studyroomtraining.co.uk">info@studyroomtraining.co.uk</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+447804649729">07804&nbsp;649729</a></p>
+      </address>
+      <div class="cta-bar">
+        <a class="button" href="mailto:info@studyroomtraining.co.uk?subject=Course%20Booking%20Enquiry">Email to Book</a>
+        <a class="button alt" href="tel:+447804649729">Call Now</a>
+      </div>
+    </section>
+  </main>
 
-  <h2>What to Expect:</h2>
-  <ul>
-    <li>Evaluations will be sent directly to managers, and staff are expected to pass a certain level of practical competency.</li>
-    <li>We ensure that staff are trained and confident to protect themselves and those they support during manual handling tasks.</li>
-  </ul>
+  <footer>
+    <div class="wrap">
+      <p>&copy; <span id="y"></span> Study Room Training. All rights reserved.</p>
+    </div>
+  </footer>
 
-  <h2>Join Us Today!</h2>
-  <p>Join us at the WelTech Centre in Welwyn Garden City to ensure your team is fully trained and compliant with essential care standards. Book your session today!</p>
-
-  <section style="padding: 30px 20px; background-color: #f9f9f9; border-top: 2px solid #ccc;">
-  <h2 style="text-align: center;">Who are we!</h2>
- 
-    <p style="max-width: 800px; margin: auto; line-height: 1.6; font-size: 1.1em;">
-    <strong>Study Room Training</strong> was created to help enhance the learning of staff members who work in Health and Social Care. 
-    We wanted to create an environment for people to come and learn, to gain confidence in their job role. 
-    Here at the Study Room you will learn in a relaxed environment where there is an emphasis on practical training, 
-    case studies, group discussion, and learning from each other. 
-    <br><br>
-    We have a vast amount of knowledge and have worked in Health and Social Care for over 25 years — from training as a Nursery Nurse 
-    to becoming a Registered Manager of a Home Care agency. We have first-hand experience of what it's like to work out in the community, hospitals, and care homes.
-    <br><br>
-    We are an approved Training Provider with the <strong>Hertfordshire Care Providers Association</strong>, and our courses are also approved by 
-    <strong>CPD Certification</strong>.
-    <br><br>
-    <em>For all your Health and Social Care Training – Study Room Training — Striving for Excellence</em>
-  </p>
-</section>
-
-
-
-  <h2>Our Address</h2>
-  <p>WelTech Centre, Ridgeway, Welwyn Garden City, Hertfordshire, AL7 2AA</p>
-
-  <h2>Contact Email</h2>
-  <p>Email us at: <a href="mailto:info@studyroomtraining.co.uk">info@studyroomtraining.co.uk</a></p>
-
-  <h2>Contact Phone</h2>
-  <p>Call us at: <a href="tel:07804649729">07804649729</a></p>
-
+  <script>
+    // Update year automatically
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
