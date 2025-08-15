@@ -7,12 +7,12 @@
   <title>Moving & Handling Training in Hertfordshire | Study Room Training (CPD Approved)</title>
 
   <!-- Primary SEO -->
-  <meta name="description" content="Study Room Training provides CPD-approved Moving & Handling (People Handling) and Health & Social Care training in Welwyn Garden City, Hertfordshire. Small groups, practical hoist & sling training, and train-the-trainer courses." />
+  <meta name="description" content="CPD-approved Moving & Handling (People Handling) and Health & Social Care training in Welwyn Garden City, Hertfordshire. Small groups, hands-on hoist & sling practice, and train-the-trainer courses." />
   <link rel="canonical" href="https://www.studyroomtraining.co.uk/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="format-detection" content="telephone=no" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.studyroomtraining.co.uk/" />
   <meta property="og:title" content="Moving & Handling Training in Hertfordshire | Study Room Training" />
@@ -22,26 +22,28 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Moving & Handling Training in Hertfordshire | Study Room Training" />
-  <meta name="twitter:description" content="CPD-approved, practical training for care homes and domiciliary care in Welwyn Garden City." />
+  <meta name="twitter:description" content="CPD-approved, practical training in Welwyn Garden City." />
   <meta name="twitter:image" content="https://www.studyroomtraining.co.uk/Training%20Image.jpg" />
 
   <!-- Icons -->
   <link rel="icon" href="/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="/logo.png" />
 
-  <!-- Preload hero image for CLS -->
+  <!-- Preload hero image to minimise CLS -->
   <link rel="preload" as="image" href="/Training%20Image.jpg" imagesrcset="/Training%20Image.jpg 1200w" imagesizes="100vw" />
 
-  <!-- Styles (brand palette derived from your logo) -->
+  <!-- Brand styles -->
   <style>
     :root{
-      --brand: #2f4ea2;          /* indigo-blue */
-      --brand-dark:#0f2f46;      /* deep blue/teal */
-      --brand-accent:#4e63d9;    /* bright accent */
+      --brand: #2f4ea2;          /* primary indigo-blue */
+      --brand-dark:#0f2f46;      /* deep navy/teal */
+      --brand-accent:#4e63d9;    /* brighter accent */
       --text:#1b1b1b;
       --muted:#5b6470;
       --bg:#ffffff;
       --bg-soft:#f6f8fb;
+      --ok:#0f7b0f;
+      --error:#a11212;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -70,15 +72,28 @@
     .list{margin:0; padding:0 0 0 18px}
     .cta-bar{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
     .button{display:inline-block; text-decoration:none; border:1px solid var(--brand); color:#fff; background:var(--brand); padding:12px 16px; border-radius:12px; font-weight:700}
-    .button.alt{background:#fff; color:var(--brand); }
+    .button.alt{background:#fff; color:var(--brand);}
     .button:hover{filter:brightness(.95)}
     address{font-style:normal}
     footer{background:var(--bg-soft); padding:28px 0; color:#3b4350; border-top:1px solid #e9edf2}
     .sr-only{position:absolute; left:-9999px}
+
+    /* Form styles */
+    form{display:grid; gap:14px; max-width:760px}
+    .row{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+    label{font-weight:600; display:block; margin-bottom:6px}
+    input, select, textarea{width:100%; font:inherit; padding:10px 12px; border-radius:12px; border:1px solid #cfd7e4; background:#fff}
+    textarea{min-height:120px; resize:vertical}
+    .note{font-size:.9rem; color:var(--muted)}
+    .help{font-size:.9rem}
+    .alert{padding:12px 14px; border-radius:12px; display:none; margin-top:8px}
+    .alert.ok{background:#e7f6e7; color:var(--ok); border:1px solid #bfe6bf}
+    .alert.err{background:#fdeaea; color:var(--error); border:1px solid #f5c2c0}
+    .hp{position:absolute; left:-5000px; width:1px; height:1px; overflow:hidden} /* honeypot */
     @media (max-width:900px){ .hero{grid-template-columns:1fr;} }
   </style>
 
-  <!-- JSON-LD: Organization + Courses -->
+  <!-- JSON-LD: Organisation -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -96,10 +111,18 @@
       "postalCode":"AL7 2AA",
       "addressCountry":"GB"
     },
-    "areaServed":"Hertfordshire, UK",
-    "sameAs":[]
+    "contactPoint":[{
+      "@type":"ContactPoint",
+      "contactType":"Customer Support",
+      "telephone":"+44-7804-649729",
+      "email":"info@studyroomtraining.co.uk",
+      "areaServed":"GB",
+      "availableLanguage":["en-GB"]
+    }]
   }
   </script>
+
+  <!-- JSON-LD: Courses -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -114,20 +137,19 @@
   }
   </script>
 
-  <!-- JSON-LD: FAQ for rich results -->
+  <!-- JSON-LD: FAQ -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
       {"@type":"Question","name":"Where is the training delivered?","acceptedAnswer":{"@type":"Answer","text":"At the WelTech Centre in Welwyn Garden City (AL7 2AA). On-site training at your care setting is also available on request."}},
-      {"@type":"Question","name":"Are your courses CPD approved?","acceptedAnswer":{"@type":"Answer","text":"Yes—our courses are CPD-approved and we are an approved training provider with the Hertfordshire Care Providers Association."}},
-      {"@type":"Question","name":"Do you offer small group sessions?","acceptedAnswer":{"@type":"Answer","text":"Yes, we focus on small groups with a strong practical component so staff build real confidence using hoists, slings and safe techniques."}}
+      {"@type":"Question","name":"Are your courses CPD approved?","acceptedAnswer":{"@type":"Answer","text":"Yes—courses are CPD-approved and we are an approved provider with the Hertfordshire Care Providers Association."}},
+      {"@type":"Question","name":"Do you offer small group sessions?","acceptedAnswer":{"@type":"Answer","text":"Yes, we focus on small groups with strong practical components using hoists, slings and safe techniques."}}
     ]
   }
   </script>
 
-  <!-- Optional: sitemap hint -->
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 </head>
 <body>
@@ -148,18 +170,19 @@
   </header>
 
   <main id="content" class="wrap">
+    <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
       <div>
         <div class="kicker">Welwyn Garden City · Hertfordshire</div>
         <h1 id="hero-title">Moving &amp; Handling Training for Care Homes and Domiciliary Care</h1>
-        <p>Practical, competency-based training with hoists and slings, delivered in small groups at the <strong>WelTech Centre (AL7 2AA)</strong>. CPD-approved courses designed to keep people safe and ensure compliance.</p>
+        <p>Hands-on, competency-based training with hoists and slings in small groups at the <strong>WelTech Centre (AL7 2AA)</strong>. CPD-approved courses to keep people safe and ensure compliance.</p>
         <div class="badges">
           <span class="badge">CPD Approved</span>
           <span class="badge">HCPA Approved Provider</span>
-          <span class="badge">Small Group, Hands-On</span>
+          <span class="badge">Small Group · Practical</span>
         </div>
         <div class="cta-bar">
-          <a class="button" href="#contact">Book a Course</a>
+          <a class="button" href="#booking">Book a Course</a>
           <a class="button alt" href="tel:+447804649729" aria-label="Call 07804 649729">Call 07804&nbsp;649729</a>
         </div>
       </div>
@@ -168,6 +191,7 @@
       </div>
     </section>
 
+    <!-- WHY US -->
     <section id="why-us" aria-labelledby="why-title">
       <h2 id="why-title">Why choose Study Room Training?</h2>
       <div class="grid">
@@ -181,7 +205,7 @@
         </div>
         <div class="card">
           <h3>Real-world practice</h3>
-          <p>Hands-on work with hoists, slings and safe techniques—build confidence that transfers to care.</p>
+          <p>Hands-on work with hoists, slings and safe techniques—confidence that transfers to care.</p>
         </div>
         <div class="card">
           <h3>Manager reports</h3>
@@ -190,6 +214,7 @@
       </div>
     </section>
 
+    <!-- COURSES -->
     <section id="courses" aria-labelledby="courses-title">
       <h2 id="courses-title">Key training areas</h2>
       <div class="grid">
@@ -199,7 +224,7 @@
         </article>
         <article class="card" itemscope itemtype="https://schema.org/Course">
           <h3 itemprop="name">Medication Administration</h3>
-          <p itemprop="description">Prevent errors with best-practice administration, documentation and MAR charts.</p>
+          <p itemprop="description">Best-practice administration, documentation and MAR charts to prevent errors.</p>
         </article>
         <article class="card" itemscope itemtype="https://schema.org/Course">
           <h3 itemprop="name">Pressure Ulcer &amp; Friction Prevention</h3>
@@ -212,20 +237,107 @@
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" aria-labelledby="about-title">
       <h2 id="about-title">About us</h2>
-      <p><strong>Study Room Training</strong> was created to help Health &amp; Social Care staff build practical skills and confidence. Our trainers have over 25 years’ experience across community, hospital and care-home settings, from Nursery Nurse to Registered Manager. We’re an <strong>HCPA Approved Training Provider</strong> and our courses are <strong>CPD approved</strong>.</p>
+      <p><strong>Study Room Training</strong> helps Health &amp; Social Care staff build practical skills and confidence. Our trainers have 25+ years’ experience across community, hospital and care-home settings. We’re an <strong>HCPA Approved Training Provider</strong> and our courses are <strong>CPD approved</strong>.</p>
     </section>
 
+    <!-- BOOKING FORM -->
+    <section id="booking" aria-labelledby="booking-title">
+      <h2 id="booking-title">Book a course</h2>
+      <p class="note">We aim to reply within one working day. For urgent bookings, call <a href="tel:+447804649729">07804 649729</a>.</p>
+
+      <form id="booking-form" action="https://formspree.io/f/xjkozdap" method="POST">
+        <!-- Honeypot -->
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off">
+
+        <div class="row">
+          <div>
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div>
+            <label for="org">Organisation</label>
+            <input id="org" name="organisation" type="text" autocomplete="organization">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="course">Course</label>
+            <select id="course" name="course" required>
+              <option value="" disabled selected>Select a course</option>
+              <option>Moving & Handling People (Hoists & Slings)</option>
+              <option>Medication Administration</option>
+              <option>Pressure Ulcer & Friction Prevention</option>
+              <option>Train-the-Trainer (5-Day)</option>
+              <option>Other (please describe)</option>
+            </select>
+          </div>
+          <div>
+            <label for="date">Preferred date</label>
+            <input id="date" name="preferred_date" type="date">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="attendees">Number of attendees</label>
+            <input id="attendees" name="attendees" type="number" min="1" step="1">
+          </div>
+          <div>
+            <label for="location">Location</label>
+            <select id="location" name="location">
+              <option>WelTech Centre (AL7 2AA)</option>
+              <option>On-site at our care setting</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="message">Notes / requirements</label>
+          <textarea id="message" name="message" placeholder="Tell us about any equipment available (hoists/slings), access needs, or preferred times."></textarea>
+        </div>
+
+        <div>
+          <label class="help">
+            <input type="checkbox" name="consent" required>
+            I understand cancellations require <strong>at least 14 business days’ notice</strong> for a full refund.
+          </label>
+        </div>
+
+        <!-- Formspree helper fields -->
+        <input type="hidden" name="_subject" value="Course booking enquiry — Study Room Training">
+        <input type="hidden" name="_template" value="table">
+
+        <button class="button" type="submit">Send booking request</button>
+        <div id="msg-ok" class="alert ok" role="status" aria-live="polite">Thanks — your request was sent. We’ll get back to you shortly.</div>
+        <div id="msg-err" class="alert err" role="alert">Sorry, something went wrong. Please email <a href="mailto:info@studyroomtraining.co.uk">info@studyroomtraining.co.uk</a> or call 07804&nbsp;649729.</div>
+      </form>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Book &amp; contact</h2>
+      <h2 id="contact-title">Contact</h2>
       <address>
         <p><strong>Address:</strong> WelTech Centre, Ridgeway, Welwyn Garden City, Hertfordshire, AL7 2AA</p>
         <p><strong>Email:</strong> <a href="mailto:info@studyroomtraining.co.uk">info@studyroomtraining.co.uk</a></p>
         <p><strong>Phone:</strong> <a href="tel:+447804649729">07804&nbsp;649729</a></p>
       </address>
       <div class="cta-bar">
-        <a class="button" href="mailto:info@studyroomtraining.co.uk?subject=Course%20Booking%20Enquiry">Email to Book</a>
+        <a class="button" href="#booking">Book a Course</a>
         <a class="button alt" href="tel:+447804649729">Call Now</a>
       </div>
     </section>
@@ -238,9 +350,32 @@
   </footer>
 
   <script>
-    // Update year automatically
+    // Auto year
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Form handler (progressive enhancement; Formspree still works without JS)
+    const form = document.getElementById('booking-form');
+    const ok = document.getElementById('msg-ok');
+    const err = document.getElementById('msg-err');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      ok.style.display = 'none'; err.style.display = 'none';
+
+      const data = new FormData(form);
+      // Abort if honeypot filled
+      if (data.get('website')) return;
+
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept':'application/json' }});
+        if (res.ok) { ok.style.display = 'block'; form.reset(); }
+        else throw new Error('Bad response');
+      } catch {
+        err.style.display = 'block';
+      }
+    });
   </script>
 </body>
 </html>
+
 
