@@ -35,15 +35,9 @@
   <!-- Brand styles -->
   <style>
     :root{
-      --brand: #2f4ea2;          /* primary indigo-blue */
-      --brand-dark:#0f2f46;      /* deep navy/teal */
-      --brand-accent:#4e63d9;    /* brighter accent */
-      --text:#1b1b1b;
-      --muted:#5b6470;
-      --bg:#ffffff;
-      --bg-soft:#f6f8fb;
-      --ok:#0f7b0f;
-      --error:#a11212;
+      --brand:#2f4ea2; --brand-dark:#0f2f46; --brand-accent:#4e63d9;
+      --text:#1b1b1b; --muted:#5b6470; --bg:#ffffff; --bg-soft:#f6f8fb;
+      --ok:#0f7b0f; --error:#a11212;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -69,7 +63,6 @@
     .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
     .card{background:#fff; border:1px solid #e8ecf3; border-radius:18px; padding:18px; box-shadow:0 8px 18px rgba(16,33,60,.05)}
     .card h3{margin:0 0 8px; font-size:1.1rem}
-    .list{margin:0; padding:0 0 0 18px}
     .cta-bar{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
     .button{display:inline-block; text-decoration:none; border:1px solid var(--brand); color:#fff; background:var(--brand); padding:12px 16px; border-radius:12px; font-weight:700}
     .button.alt{background:#fff; color:var(--brand);}
@@ -90,6 +83,8 @@
     .alert.ok{background:#e7f6e7; color:var(--ok); border:1px solid #bfe6bf}
     .alert.err{background:#fdeaea; color:var(--error); border:1px solid #f5c2c0}
     .hp{position:absolute; left:-5000px; width:1px; height:1px; overflow:hidden} /* honeypot */
+    .captcha-wrap{margin-top:6px}
+    .small{font-size:.9rem; color:var(--muted)}
     @media (max-width:900px){ .hero{grid-template-columns:1fr;} }
   </style>
 
@@ -103,64 +98,35 @@
     "logo":"https://www.studyroomtraining.co.uk/logo.png",
     "email":"info@studyroomtraining.co.uk",
     "telephone":"+44-7804-649729",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Welwyn Garden City",
-      "addressRegion":"Hertfordshire",
-      "addressCountry":"GB"
-    },
-    "contactPoint":[{
-      "@type":"ContactPoint",
-      "contactType":"Customer Support",
-      "telephone":"+44-7804-649729",
-      "email":"info@studyroomtraining.co.uk",
-      "areaServed":"GB",
-      "availableLanguage":["en-GB"]
-    }]
+    "address":{"@type":"PostalAddress","addressLocality":"Welwyn Garden City","addressRegion":"Hertfordshire","addressCountry":"GB"},
+    "contactPoint":[{"@type":"ContactPoint","contactType":"Customer Support","telephone":"+44-7804-649729","email":"info@studyroomtraining.co.uk","areaServed":"GB","availableLanguage":["en-GB"]}]
   }
   </script>
 
   <!-- JSON-LD: Courses -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"Health & Social Care Courses",
-    "itemListElement":[
-      {"@type":"Course","name":"Moving and Handling People (Hoists & Slings)","description":"Practical, competency-based training for care homes and domiciliary care teams."},
-      {"@type":"Course","name":"Medication Administration","description":"Safe administration, documentation and error prevention for care staff."},
-      {"@type":"Course","name":"Pressure Ulcer & Friction Prevention","description":"Risk factors, positioning, equipment and prevention strategies."},
-      {"@type":"Course","name":"Train-the-Trainer (5-Day)","description":"Develop in-house trainers; full induction day and annual updates."}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"ItemList","name":"Health & Social Care Courses",
+   "itemListElement":[
+     {"@type":"Course","name":"Moving and Handling People (Hoists & Slings)","description":"Practical, competency-based training for care homes and domiciliary care teams."},
+     {"@type":"Course","name":"Medication Administration","description":"Safe administration, documentation and error prevention for care staff."},
+     {"@type":"Course","name":"Pressure Ulcer & Friction Prevention","description":"Risk factors, positioning, equipment and prevention strategies."},
+     {"@type":"Course","name":"Train-the-Trainer (5-Day)","description":"Develop in-house trainers; full induction day and annual updates."}
+   ]}
   </script>
 
   <!-- JSON-LD: FAQ -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"Where is the training delivered?",
-        "acceptedAnswer":{"@type":"Answer","text":"At our Training House in Welwyn Garden City (by appointment). On-site training at your care setting is also available on request."}
-      },
-      {
-        "@type":"Question",
-        "name":"Are your courses CPD approved?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes—courses are CPD-approved and we are an approved provider with the Hertfordshire Care Providers Association."}
-      },
-      {
-        "@type":"Question",
-        "name":"Do you offer small group sessions?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes, we focus on small groups with strong practical components in a realistic home environment using hoists, slings and safe techniques."}
-      }
-    ]
-  }
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Where is the training delivered?","acceptedAnswer":{"@type":"Answer","text":"At our Training House in Welwyn Garden City (by appointment). On-site training at your care setting is also available on request."}},
+    {"@type":"Question","name":"Are your courses CPD approved?","acceptedAnswer":{"@type":"Answer","text":"Yes—courses are CPD-approved and we are an approved provider with the Hertfordshire Care Providers Association."}},
+    {"@type":"Question","name":"Do you offer small group sessions?","acceptedAnswer":{"@type":"Answer","text":"Yes, we focus on small groups with strong practical components in a realistic home environment using hoists, slings and safe techniques."}}
+  ]}
   </script>
 
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+  <!-- Google reCAPTCHA v2 -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <a class="sr-only" href="#content">Skip to content</a>
@@ -205,22 +171,10 @@
     <section id="why-us" aria-labelledby="why-title">
       <h2 id="why-title">Why choose Study Room Training?</h2>
       <div class="grid">
-        <div class="card">
-          <h3>Competency-based</h3>
-          <p>Staff complete practical assessments so managers can evidence competence and compliance.</p>
-        </div>
-        <div class="card">
-          <h3>Realistic home environment</h3>
-          <p>Train in a house — room layouts, space and scenarios mirror Home Care work.</p>
-        </div>
-        <div class="card">
-          <h3>Weekly availability</h3>
-          <p>Open courses run regularly; send individuals or book dedicated sessions for your team.</p>
-        </div>
-        <div class="card">
-          <h3>Manager reports</h3>
-          <p>Post-course evaluations sent to managers to support audits and CQC readiness.</p>
-        </div>
+        <div class="card"><h3>Competency-based</h3><p>Staff complete practical assessments so managers can evidence competence and compliance.</p></div>
+        <div class="card"><h3>Realistic home environment</h3><p>Train in a house — room layouts, space and scenarios mirror Home Care work.</p></div>
+        <div class="card"><h3>Weekly availability</h3><p>Open courses run regularly; send individuals or book dedicated sessions for your team.</p></div>
+        <div class="card"><h3>Manager reports</h3><p>Post-course evaluations sent to managers to support audits and CQC readiness.</p></div>
       </div>
     </section>
 
@@ -258,9 +212,12 @@
       <h2 id="booking-title">Book a course</h2>
       <p class="note">We aim to reply within one working day. For urgent bookings, call <a href="tel:+447804649729">07804 649729</a>.</p>
 
-      <form id="booking-form" action="https://formspree.io/f/xjkozdap" method="POST">
+      <form id="booking-form" action="https://formspree.io/f/xjkozdap" method="POST" novalidate>
         <!-- Honeypot -->
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off">
+
+        <!-- Time-trap (helps reduce bot spam) -->
+        <input type="hidden" name="submitted_at" id="submitted_at">
 
         <div class="row">
           <div>
@@ -328,13 +285,23 @@
           </label>
         </div>
 
+        <!-- reCAPTCHA -->
+        <div class="captcha-wrap">
+          <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+          <div id="captcha-error" class="alert err" role="alert" aria-live="polite">Please complete the reCAPTCHA.</div>
+        </div>
+
         <!-- Formspree helper fields -->
         <input type="hidden" name="_subject" value="Course booking enquiry — Study Room Training">
         <input type="hidden" name="_template" value="table">
 
-        <button class="button" type="submit">Send booking request</button>
+        <button id="submitBtn" class="button" type="submit">Send booking request</button>
         <div id="msg-ok" class="alert ok" role="status" aria-live="polite">Thanks — your request was sent. We’ll get back to you shortly.</div>
         <div id="msg-err" class="alert err" role="alert">Sorry, something went wrong. Please email <a href="mailto:info@studyroomtraining.co.uk">info@studyroomtraining.co.uk</a> or call 07804&nbsp;649729.</div>
+
+        <noscript>
+          <p class="small">JavaScript is disabled. Please complete the reCAPTCHA box above before submitting.</p>
+        </noscript>
       </form>
     </section>
 
@@ -363,23 +330,45 @@
     // Auto year
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Form handler (progressive enhancement; Formspree still works without JS)
+    // Capture page load time for a simple time-trap (spam reduction)
+    const submittedAt = document.getElementById('submitted_at');
+    submittedAt.value = Date.now();
+
+    // Form handler (progressive enhancement; server still verifies reCAPTCHA)
     const form = document.getElementById('booking-form');
     const ok = document.getElementById('msg-ok');
     const err = document.getElementById('msg-err');
+    const captchaErr = document.getElementById('captcha-error');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      ok.style.display = 'none'; err.style.display = 'none';
+      ok.style.display = 'none'; err.style.display = 'none'; captchaErr.style.display = 'none';
 
-      const data = new FormData(form);
-      // Abort if honeypot filled
-      if (data.get('website')) return;
+      // Require at least ~5 seconds on page (bots fail this)
+      const elapsed = Date.now() - Number(submittedAt.value || Date.now());
+      if (elapsed < 5000) {
+        captchaErr.textContent = "Please wait a few seconds and try again.";
+        captchaErr.style.display = 'block';
+        return;
+      }
+
+      // Require Google reCAPTCHA
+      if (!(window.grecaptcha && grecaptcha.getResponse().length)) {
+        captchaErr.textContent = "Please complete the reCAPTCHA.";
+        captchaErr.style.display = 'block';
+        return;
+      }
 
       try {
+        const data = new FormData(form);
         const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept':'application/json' }});
-        if (res.ok) { ok.style.display = 'block'; form.reset(); }
-        else throw new Error('Bad response');
+        if (res.ok) {
+          ok.style.display = 'block';
+          form.reset();
+          if (window.grecaptcha) grecaptcha.reset();
+        } else {
+          throw new Error('Bad response');
+        }
       } catch {
         err.style.display = 'block';
       }
@@ -387,5 +376,7 @@
   </script>
 </body>
 </html>
+
+
 
 
