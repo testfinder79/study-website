@@ -287,7 +287,7 @@
 
         <!-- reCAPTCHA -->
         <div class="captcha-wrap">
-          <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+          <div class="g-recaptcha" data-sitekey="6LdU0qcrAAAAAN8vH-G4Bz-6SmQETSZNw57M5K3w"></div>
           <div id="captcha-error" class="alert err" role="alert" aria-live="polite">Please complete the reCAPTCHA.</div>
         </div>
 
@@ -344,7 +344,7 @@
       e.preventDefault();
       ok.style.display = 'none'; err.style.display = 'none'; captchaErr.style.display = 'none';
 
-      // Require at least ~5 seconds on page (bots fail this)
+      // Require ~5 seconds on page (bots fail this)
       const elapsed = Date.now() - Number(submittedAt.value || Date.now());
       if (elapsed < 5000) {
         captchaErr.textContent = "Please wait a few seconds and try again.";
@@ -376,7 +376,5 @@
   </script>
 </body>
 </html>
-
-
 
 
